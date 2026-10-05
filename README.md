@@ -5,7 +5,7 @@
 copy a prompt, run it on the new model, post the result.
 game, frontend, animation, blender and architecture tests in one place.
 
-🔗 live site: [hsanni1.github.io/prompt-portal](https://hsanni1.github.io/prompt-portal)
+🔗 live site: COMING SOON
 👤 made by [@haleeeemahh](https://x.com/haleeeemahh)
 
 ---
