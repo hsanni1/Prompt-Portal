@@ -10,6 +10,9 @@ game, frontend, animation, blender and architecture tests in one place.
 
 ---
 
+<img width="1600" height="1162" alt="PHOTO-2026-10-05-17-10-48" src="https://github.com/user-attachments/assets/9f76c5be-5c8f-4cc2-8125-04312f4116c1" />
+
+
 ## what it is
 
 prompt portal is a free library of ready-to-copy test prompts that creators use to try out new ai models and share the results.
