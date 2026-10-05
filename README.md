@@ -6,7 +6,8 @@ copy a prompt, run it on the new model, post the result.
 game, frontend, animation, blender and architecture tests in one place.
 
 🔗 live site: COMING SOON
-👤 made by [@haleeeemahh](https://x.com/haleeeemahh)
+
+made by [@haleeeemahh](https://x.com/haleeeemahh)
 
 ---
 
