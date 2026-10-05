@@ -47,7 +47,7 @@ more coming soon.
 1. pick a test from the library
 2. tap **copy prompt**
 3. paste it into the model you want to test
-4. post your result and share the site under your post 🙏
+4. post your result and share the site under your post 
 
 want your result featured? tag [@haleeeemahh](https://x.com/haleeeemahh) on x.
 
