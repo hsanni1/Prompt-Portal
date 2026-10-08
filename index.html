@@ -545,43 +545,43 @@ const tests = [
    link  = full result visitors can open themselves (live html, x post, demo) */
 const results = {
   "claymation birds": [
-    { model: "opus 5.5", date: "oct 2026", note: "high effort · 190.3k tokens · ~$4.03",
+    { model: "opus 5.5", note: "high effort · 190.3k tokens · ~$4.03",
       video: "claymation-birds.mp4",
       credit: "srikanthvaluri",
       link: "https://x.com/srikanthvaluri/status/2106422173904834733" }
   ],
   "voxel pagoda": [
-    { model: "opus 5.5", date: "oct 2026", note: "",
-      video: "voxel-pagoda.mp4.mov",      /* file sits next to this html */
+    { model: "opus 5.5", note: "",
+      video: "voxel-pagoda.mp4",      /* file sits next to this html */
       link: "voxel-pagoda-garden.html"   /* sits in the same repo as this file */
     }
   ],
   "one-file platformer": [
-    { model: "opus 5.5", score: 92, date: "sep 2026", sample: true, note: "all 3 levels worked first try, smooth jump feel", link: "" },
-    { model: "gpt-6.1 sol", score: 89, date: "sep 2026", sample: true, note: "great level design, enemy collision a bit off", link: "" },
-    { model: "gpt-6 astra", score: 85, date: "sep 2026", sample: true, note: "solid, win screen missing on first run", link: "" },
-    { model: "sonnet 5.5", score: 84, date: "sep 2026", sample: true, note: "fast and clean, simpler art", link: "" },
-    { model: "gemini 4 pro", score: 80, date: "sep 2026", sample: true, note: "needed one follow-up to fix coins", link: "" }
+    { model: "opus 5.5", score: 92, sample: true, note: "all 3 levels worked first try, smooth jump feel", link: "" },
+    { model: "gpt-6.1 sol", score: 89, sample: true, note: "great level design, enemy collision a bit off", link: "" },
+    { model: "gpt-6 astra", score: 85, sample: true, note: "solid, win screen missing on first run", link: "" },
+    { model: "sonnet 5.5", score: 84, sample: true, note: "fast and clean, simpler art", link: "" },
+    { model: "gemini 4 pro", score: 80, sample: true, note: "needed one follow-up to fix coins", link: "" }
   ],
   "landing page from one line": [
-    { model: "opus 5.5", score: 93, date: "sep 2026", sample: true, note: "best typography and spacing of the batch", link: "" },
-    { model: "gpt-6.1 sol", score: 90, date: "sep 2026", sample: true, note: "strong hero, pricing felt generic", link: "" },
-    { model: "sonnet 5.5", score: 88, date: "sep 2026", sample: true, note: "very responsive, quick output", link: "" },
-    { model: "gemini 4 pro", score: 82, date: "sep 2026", sample: true, note: "good layout, colours a bit loud", link: "" }
+    { model: "opus 5.5", score: 93, sample: true, note: "best typography and spacing of the batch", link: "" },
+    { model: "gpt-6.1 sol", score: 90, sample: true, note: "strong hero, pricing felt generic", link: "" },
+    { model: "sonnet 5.5", score: 88, sample: true, note: "very responsive, quick output", link: "" },
+    { model: "gemini 4 pro", score: 82, sample: true, note: "good layout, colours a bit loud", link: "" }
   ],
   "scroll story": [
-    { model: "gpt-6.1 sol", score: 87, date: "sep 2026", sample: true, note: "plane path was buttery", link: "" },
-    { model: "opus 5.5", score: 86, date: "sep 2026", sample: true, note: "best scene transitions", link: "" },
-    { model: "gemini 4 pro", score: 83, date: "sep 2026", sample: true, note: "colour shifts looked great", link: "" }
+    { model: "gpt-6.1 sol", score: 87, sample: true, note: "plane path was buttery", link: "" },
+    { model: "opus 5.5", score: 86, sample: true, note: "best scene transitions", link: "" },
+    { model: "gemini 4 pro", score: 83, sample: true, note: "colour shifts looked great", link: "" }
   ],
   "procedural city": [
-    { model: "opus 5.5", score: 79, date: "sep 2026", sample: true, note: "script ran clean, nice sunset", link: "" },
-    { model: "gpt-6.1 sol", score: 76, date: "sep 2026", sample: true, note: "streetlights floating, rest solid", link: "" }
+    { model: "opus 5.5", score: 79, sample: true, note: "script ran clean, nice sunset", link: "" },
+    { model: "gpt-6.1 sol", score: 76, sample: true, note: "streetlights floating, rest solid", link: "" }
   ],
   "lagos mixed-use block": [
-    { model: "opus 5.5", score: 88, date: "sep 2026", sample: true, note: "really understood heat and power backup", link: "" },
-    { model: "gemini 4 pro", score: 85, date: "sep 2026", sample: true, note: "best section diagram", link: "" },
-    { model: "gpt-6 astra", score: 83, date: "sep 2026", sample: true, note: "good plan, light on parking", link: "" }
+    { model: "opus 5.5", score: 88, sample: true, note: "really understood heat and power backup", link: "" },
+    { model: "gemini 4 pro", score: 85, sample: true, note: "best section diagram", link: "" },
+    { model: "gpt-6 astra", score: 83, sample: true, note: "good plan, light on parking", link: "" }
   ]
 };
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -722,7 +722,7 @@ function renderDetail(t) {
     <div class="result in" style="--d:${.32 + i * .06}s">
       <span class="rank">${i + 1}</span>
       <span class="name">${modelLabel(r.model)}</span>
-      <span class="note">${r.note ? esc(r.note) + " " : ""}<span class="mono">${r.note ? "· " : ""}${esc(r.date)}</span></span>
+      <span class="note">${r.note ? esc(r.note) : ""}</span>
       <span class="right">
         ${typeof r.score === "number" ? `<span class="bar"><span style="width:${r.score}%"></span></span><span class="score">${r.score}</span>` : ""}
         ${r.link ? `<a class="see" href="${esc(r.link)}" target="_blank" rel="noopener noreferrer">${/x\.com|twitter\.com/.test(r.link) ? "view post" : "open full scene"}</a>` : ""}
